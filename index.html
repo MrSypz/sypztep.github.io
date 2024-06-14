@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles/dashboard.css">
+</head>
+<body>
+    <header>
+        <div class="banner"></div>
+        <div class="top">
+            <h1>Welcome to the Vendetta</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="loadSection('home')">Home</a></li>
+                <li id="profileLink"><a href="#">Profile</a> (Login required)</li>
+                <li><a href="#" onclick="goToPatch()">Patch Notes</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Account</a>
+                    <div class="dropdown-content">
+                        <a id="signInLink" href="#" onclick="loadSection('signin')">Sign In</a>
+                        <a id="signUpLink" href="#" onclick="loadSection('signup')">Sign Up</a>
+                        <a id="logoutLink" href="#">Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="content">
+        <!-- Content will be loaded here dynamically -->
+    </main>
+
+    <footer>
+        <p>© 2024 MrSypztep Server. All rights reserved.</p>
+        <p>Developed by MrSypztep</p>    </footer>
+    <script src="script/selectpage.js"></script>
+    <script src="script/checkSession.js"></script>
+</body>
+</html>

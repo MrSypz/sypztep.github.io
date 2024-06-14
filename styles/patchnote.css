@@ -1,0 +1,159 @@
+/* Body */
+body {
+    background-color: #1a1a1d; /* Dark gray background */
+    color: #f0f0f0; /* Light gray text */
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    animation: fadeIn 1s ease-in-out;
+    overflow-y: scroll; /* Enable vertical scrollbar */
+    scrollbar-width: thin; /* Thin scrollbar (for Firefox) */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: #2a2a2e;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.sidebar.collapsed {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    color: #f0f0f0;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background: #444;
+}
+
+.sidebar-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #ffab40;
+    color: #1a1a1d;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Toggle Button */
+.toggle-button {
+    position: fixed;
+    top: 75px;
+    left: 75px;
+    background-color: #272629;
+    color: #f0f0f0;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 1000;
+    transition: left 0.3s ease;
+}
+
+
+/* Adjusted Main Content when Sidebar is Collapsed */
+.sidebar.collapsed + .toggle-button {
+    left: 10px;
+}
+
+/* Main Content */
+.main-content {
+    background: rgba(26, 26, 29, 0.8); /* Slightly lighter background */
+    border-radius: 10px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    max-height: 90vh;
+    flex: 1;
+    margin-left: 270px;
+    transition: margin-left 0.3s ease;
+}
+/*Update to move the middle side */
+.sidebar.collapsed + .main-content {
+    margin-left: 0;
+}
+
+/* Headings */
+h1 { /*หัวข้อใหญ่สุด */
+    color: #ffab40; /* Orange headings */
+}
+h2, h3 { /*หัวข้อลองกับย่อย*/
+    color: #e6c08e; /* Orange headings */
+}
+
+li {
+    color: #c8c7c9;
+}
+
+/* Links */
+a {
+    color: #80d8ff; /* Light blue links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+/* Scrollbar styles for Chrome, Safari, and Opera */
+::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #333; /* Darker thumb color */
+    border-radius: 10px; /* Roundness of the scrollbar thumb */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #2d2d33; /* Darker track color */
+}

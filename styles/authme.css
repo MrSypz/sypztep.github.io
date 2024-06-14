@@ -1,0 +1,65 @@
+/* General styling for the section */
+.auth-section {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #333135;
+    border-radius: 5px;
+    background-color: #26262b;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the form */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styling for labels */
+.auth-form label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Styling for inputs */
+.auth-form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #222121;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Styling for the submit button */
+.auth-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Change background color on hover */
+.auth-form button:hover {
+    background-color: #45a049;
+}
+
+/* Styling for the login label */
+.auth-section .login {
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Styling for the login link */
+.auth-section .login a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.auth-section .login a:hover {
+    text-decoration: underline;
+}
